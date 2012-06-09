@@ -17,7 +17,7 @@ public class PisaTower extends Actor
     public void act() 
     {
         if (Greenfoot.getRandomNumber(3)==0) {
-            getWorld().addObject(new Bullet(42, Greenfoot.getRandomNumber(359)), getX(), getY());
+            getWorld().addObject(new Bullet(1, Greenfoot.getRandomNumber(359)), getX(), getY());
         }
     }    
 }

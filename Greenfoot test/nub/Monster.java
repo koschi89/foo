@@ -1,4 +1,5 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
+import java.util.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Monster here.
@@ -10,8 +11,9 @@ public class Monster extends Actor
 {
     private Direction dir;
     private boolean isDeadCheck = false;
-    private int life;
+    private float life;
     private static final int LIFEPOINTS = 10;
+    private int count;
     
     public static class Direction 
     { 
@@ -26,20 +28,34 @@ public class Monster extends Actor
 
     };
     public Monster(){
-        dir = new Direction(0,1);
+        
         life = LIFEPOINTS;
+        
     }
         
 
     public void act() 
     {
-        if (life <=0)
+        
+        count ++;
+        java.util.List bullets = getNeighbours(10, true, Bullet.class);
+        
+        for (Object bullet : bullets){
+            life -= ((Bullet)bullet).getForce();
+        }
+        
+        ArrayList<Path> pathArray=((Field)getWorld()).pathArray;
+        
+        if (life <=0 || (count == pathArray.size())){
             die();
-           
+            return;
+        }
+        
+       Path path = pathArray.get(count);
+       this.setLocation(path.getX(), path.getY());
+     
     }    
     public void die(){
-        //Field theWorld = getWorld();
-       //theWorld.addObject(DeadAnimal, getX(), getY());
-        //getWorld().removeObject(this);
+       getWorld().removeObject(this);
     }
 }

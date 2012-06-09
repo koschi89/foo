@@ -1,6 +1,8 @@
  
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
+import java.util.ArrayList;
+  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * This class represents a field of grass populated by a flock of sheep. 
@@ -13,19 +15,20 @@ public class Field extends World
 {
 
     // Width of the sheep-field in cell-uints.
-    public static final int FLD_WID = 50;
+    public static final int FLD_WID = 50*4;
 
     // Height of the sheep-field in cell-uints.
-    public static final int FLD_HGH = 38;
+    public static final int FLD_HGH = 38*4;
+    public int count;
 
- 
+    public ArrayList<Path> pathArray= new ArrayList<Path>();
     /**
      * Constructor.
      */
     public Field()
     {    
         // Create a new world with given width and height in cell-units. Set size of a cell size to 16x16 pixels.
-        super(FLD_WID, FLD_HGH, 16); 
+        super(FLD_WID, FLD_HGH, 4); 
 
         // Add bricks to top 3 rows in the field.
         for (int i=0;i < 3 ;++i) {
@@ -50,7 +53,14 @@ public class Field extends World
             Brick bTemp = new Brick();
             addObject(bTemp, j,FLD_HGH-1);
         }
-        
+        // adds Path
+
+         for (int j= 0; j < FLD_HGH; ++j) {
+            
+            Path pTemp = new Path();
+            addObject(pTemp, FLD_WID/2, j);
+            pathArray.add(pTemp);
+        }
         int towerX = this.getWidth()/3;
         int towerY = this.getHeight()/2;
         
@@ -60,10 +70,20 @@ public class Field extends World
         PisaTower pt2 = new PisaTower();
         addObject(pt2, 2*towerX, towerY);
         
+        
+        
         // Make counter
 
         // Perepare field as intialized using the visual interface for Greenfoot.
    //     prepare();
+    }
+    public void act(){
+        count ++;
+        if (count==20){
+            Monster m = new Monster();
+            addObject(m, 0, 0);
+            count =0;
+        }
     }
 
      /**

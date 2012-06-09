@@ -9,14 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bullet extends Actor
 {   
     
-    int force;
+    float force;
     
-    public Bullet(int force, int rotation){
+    public Bullet(float force, int rotation){
         this.force = force;
         this.setRotation(rotation);
     }
     
-    public int getForce(){
+    public float getForce(){
         return force;
     }
     
@@ -26,6 +26,9 @@ public class Bullet extends Actor
      */
     public void act() 
     {
-        this.move(1);
+        if (this.getIntersectingObjects(Brick.class).size() > 0){
+            getWorld().removeObject(this);
+        }
+        this.move(10);
     }    
 }

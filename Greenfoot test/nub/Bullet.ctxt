@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=force\ rotation
-comment0.target=Bullet(int,\ int)
+comment0.target=Bullet(float,\ int)
 comment1.params=
-comment1.target=int\ getForce()
+comment1.target=float\ getForce()
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\n\ Act\ -\ do\ whatever\ the\ Bullet\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
