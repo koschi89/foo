@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CarrionBeetle()
+comment0.text=\r\n\ Default\ Constructor.\r\n\ \r\n\ You\ need\ to\ extend\ this\ to\ initialize\ the\ amount\ of\ food\ in\ the\ \r\n\ Bug's\ stomach\ when\ it\ is\ created.\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Bug\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=Field\ getWorld()
+comment3.params=theField\ oldX\ oldY\ newX\ newY
+comment3.target=void\ bounceFromSolid(Field,\ int,\ int,\ int,\ int)
+comment4.params=
+comment4.target=void\ fortPflanzung()
+comment5.params=a
+comment5.target=void\ setFull(float)
+comment6.params=moveVertical\ moveHorizontal\ toTop\ toLeft
+comment6.target=void\ setDirection(boolean,\ boolean,\ boolean,\ boolean)
+comment7.params=
+comment7.target=boolean\ isDead()
+comment8.params=
+comment8.target=void\ die()
+comment9.params=i\ k\ X\ Y
+comment9.target=void\ Eat(int,\ int,\ int,\ int)
+numComments=10
