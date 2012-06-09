@@ -16,8 +16,6 @@ public class Field extends World
     // Height of the sheep-field in cell-uints.
     public static final int FLD_HGH = 38;
 
-
-
  
     /**
      * Constructor.
@@ -50,6 +48,15 @@ public class Field extends World
             Brick bTemp = new Brick();
             addObject(bTemp, j,FLD_HGH-1);
         }
+        
+        int towerX = this.getWidth()/3;
+        int towerY = this.getHeight()/2;
+        
+        PisaTower pt1 = new PisaTower();
+        addObject(pt1, towerX, towerY);
+        
+        PisaTower pt2 = new PisaTower();
+        addObject(pt2, 2*towerX, towerY);
         
         // Make counter
 
@@ -90,14 +97,8 @@ public class Field extends World
 
         return !lTemp.isEmpty();
     }
-
-
-    /**
-     * This method is called when the simulation is stopped
-     */
-   
     
-    }
+}
 
 
 
