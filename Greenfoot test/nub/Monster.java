@@ -10,8 +10,8 @@ public class Monster extends Actor
 {
     private Direction dir;
     private boolean isDeadCheck = false;
-    private int life
-    private static final int LIFEPOINTS = 10
+    private int life;
+    private static final int LIFEPOINTS = 10;
     
     public static class Direction 
     { 
@@ -28,6 +28,7 @@ public class Monster extends Actor
     public Monster(){
         dir = new Direction(0,1);
         life = LIFEPOINTS;
+    }
         
 
     public void act() 
@@ -37,8 +38,8 @@ public class Monster extends Actor
            
     }    
     public void die(){
-        Field theWorld = getWorld();
+        //Field theWorld = getWorld();
        //theWorld.addObject(DeadAnimal, getX(), getY());
-        getWorld().removeObject(this);
+        //getWorld().removeObject(this);
     }
 }
