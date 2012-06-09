@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Snake()
-comment0.text=\r\n\ Default\ Constructor.\r\n\ \r\n\ You\ need\ to\ extend\ this\ to\ initialize\ the\ amount\ of\ food\ in\ the\ \r\n\ sheep's\ stomach\ when\ it\ is\ created.\r\n
+comment0.text=\n\ Default\ Constructor.\n\ \n\ You\ need\ to\ extend\ this\ to\ initialize\ the\ amount\ of\ food\ in\ the\ \n\ sheep's\ stomach\ when\ it\ is\ created.\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Snake\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Snake\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=Field\ getWorld()
 comment3.params=theField\ oldX\ oldY\ newX\ newY

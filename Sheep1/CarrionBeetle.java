@@ -61,17 +61,21 @@ public class CarrionBeetle extends Actor
             int newY = oldY + dir.upSteps;
             
         
-        if (!isEating){
-            if(theField.hasBrickAt(newX, newY))
-            {   
-                bounceFromSolid(theField, oldX, oldY, newX, newY);}
-            else{setLocation(newX, newY);}
-                for(int i=-1; i<=1|| isEating; i++){
-                    for(int k=-1; k<=1 || isEating; k++){
-                        Eat(i,k,newX,newY);
+        if (!isEating) {
+            
+            if(theField.hasBrickAt(newX, newY)) {   
+                bounceFromSolid(theField, oldX, oldY, newX, newY);
+            } else {
+                setLocation(newX, newY);
+            }
+            
+            for(int i=-1; i<=1|| isEating; i++){
+                for(int k=-1; k<=1 || isEating; k++){
+                    Eat(i,k,newX,newY);
                 }
             }
-        full-=0.05;
+            
+            full-=0.05;
         }
 
          if (full>=MAX_FULL){
